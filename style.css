@@ -1,57 +1,98 @@
-body{
-    background-color: #121212;
+.d-flex.flex-column.flex-shrink-0.bg-body-tertiary{
+    background-color: #212529 !important
+}
+
+.text-end {
+    text-align: right !important;
+    display: flex;
+    flex-direction: row;
+    width: max-content;
+    padding-right: 30px;
 }
 
 body {
     background-color: #121212 !important;
+    position: relative;
 }
 
 .first1{
     background-image: url("./images/bg1.png");
+    padding-top: 6%;
+    padding-bottom: 2%;
 }
+
+.row-cols-5>* {
+    flex: 0 0 auto;
+    width: 20%;
+    padding-left: 0px !important;
+
+}
+
+.home-col{
+    background-color: #484747;
+    margin:15px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: row;
+    opacity: 0.8;
+}
+
+.home-col:hover{
+    cursor:pointer;
+    box-shadow: 0 0 20px coral;
+    
+}
+
+.home-col h6{
+    display: flex;
+    flex-direction: column;
+    align-items:start;
+    justify-content: center;
+    margin-left: 20px ;
+    color:rgb(255, 255, 255) ;
+    font-weight: bold;
+}
+
+.home-col svg{
+    background-color: crimson;
+    padding:10px;
+}
+
+.first-row{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding-left: 0px;
+}
+
+
 .first2{
     background-image: url("./images/bg.png");
     width: 1280px !important;
     height: 400px !important;
-    ;
 }
 
-.padding{
-    margin-right: 10px;
+.navbar{
+    height:10%;
 }
 
-.search-container {
-    position: relative;
-  }
-
-.c-search-bar{
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-}
-
-
-.search-bar{
-    width: 100%;
+.search-container{
+    padding-top: 26px;
 }
 
 .search-input {
     padding: 10px 10px 10px 35px;
     width: 60%;
     border: 1px solid #ccc;
-    border-radius: 5px;
+    border-radius: 40px;
     outline: none;
 }
 
 .search-icon {
-    position: absolute;
-    left: 245px;
-    top: 50%;
-    transform: translateY(-50%);
-    width: 20px;
-    height: 20px;
+    transform: translateY(-140%) translateX(20%);
+    width: 25px;
+    height: 25px;
     background-image: url(./images/search.png);
     background-size: cover;
     cursor:pointer;
@@ -67,13 +108,41 @@ body {
     margin-bottom: 20px;
     border-radius: 10px;
     border: 1px solid #ccc;
-    box-shadow: 0 0 10px rgba(0,0,0,0.2);
+}
+
+.card:hover{
+    box-shadow: 0 0 20px rgb(233, 26, 26);
+    color: rgb(233, 26, 26);
+}
+
+.play-img {
+    transition: filter 0.3s ease-in-out; /* add a smooth transition effect */
+}
+
+.play-img {
+    cursor: pointer;
+    width: 30px;
+    height: 30px;
+    position: relative;
+    margin-left: 2px;
 }
 
 .card-title{
     cursor:default;
 }
 
+.bi-person-circle{
+    transform: translateY(80%) translateX(-400%);
+    cursor: pointer;
+}
+
+.hov:hover{
+    opacity:0.5;
+}
+
+.card-title{
+    cursor:default;
+}
 .card-body {
     display: flex;
     flex-direction: column;
@@ -81,15 +150,9 @@ body {
     align-items: center;
 }
 
-.play-img {
-    cursor: pointer;
-    width: 25px;
-    height: 25px;
-    position: relative;
-    margin-left: 2px;
-}
 
 .bottom-play-bar{
+    z-index: 10;
     position:sticky;
     bottom:0;
     width: 100%;
@@ -116,4 +179,12 @@ body {
 }
 
 
-  
+.d-flex.flex-column.flex-shrink-0.bg-body-tertiary {
+    position: fixed; /* Add this to make the sidebar fixed */
+    top: 0; /* Set the top position to 0 */
+    left: 0; /* Set the left position to 0 */
+    width: 4.5rem; /* Keep the width as is */
+    height: 100vh; /* Set the height to full viewport height */
+    overflow-y: auto; /* Add this to enable scrolling if the content exceeds the height */
+    z-index: 1; /* Add this to ensure the sidebar is on top of other elements */
+  }
