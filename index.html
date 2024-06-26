@@ -259,17 +259,25 @@
     </div>
 
     <!----- bottom play bar ------>
-    <div class="bottom-play-bar">
-        <div class="play-bar-icons">
-            <img class="bar-img " src="./images/play-bar-icons/shufle.png" alt="shuffle" width="60px">
-            <img class="bar-img" src="./images/play-bar-icons/previous.png" alt="previous" width="60px">
-            <img class="bar-img play" src="./images/play-bar-icons/play-button.png" alt="play" width="80px" id="masterPlay">
-            <img class="bar-img" src="./images/play-bar-icons/next.png" alt="next" width="60px" id="nextSong">
-            <img class="bar-img" src="./images/play-bar-icons/repeat-button.png" alt="repeat" width="60px">
+    <div class="bottom-play-bar-outer">
+        <div class="playing-img" style="display: flex; flex-direction:row">
+            <img src="./images/cover/s6.png" class="card-img-top" alt="..." id="playingImg">
         </div>
+        <div style="display: flex;flex-direction:column">
+            <h5 style="color: white;padding-top:40px" id="songName">New Rules</h5>
+            <h6 style="color: dimgray; display:none">Dua Lipa</h6>
+        </div>
+        <div class="bottom-play-bar">
+            <div class="play-bar-icons">
+                <img class="bar-img " src="./images/play-bar-icons/shufle.png" alt="shuffle" width="60px">
+                <img class="bar-img" src="./images/play-bar-icons/previous.png" alt="previous" width="60px" id="prevSong">
+                <img class="bar-img play" src="./images/play-bar-icons/play-button.png" alt="play" width="80px" id="masterPlay">
+                <img class="bar-img" src="./images/play-bar-icons/next.png" alt="next" width="60px" id="nextSong">
+                <img class="bar-img" src="./images/play-bar-icons/repeat-button.png" alt="repeat" width="60px">
+            </div>
 
-        <input id="myplaybar" type="range" name="range" min="0" value="0" max="100" class="slider">
-        
+            <input id="myplaybar" type="range" name="range" min="0" value="0" max="100" class="slider">
+        </div>
     </div>
 
 
