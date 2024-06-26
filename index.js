@@ -88,6 +88,7 @@ nextSong.addEventListener('click', () => {
     updatePlayImage(currentImg);
     // Update playingImg src
     playingImg.src = `images/s${currSongIndex}.jpg`;
+    updateSongName(currSongIndex);
 });
 
 prevSong.addEventListener('click', () => {
@@ -102,6 +103,7 @@ prevSong.addEventListener('click', () => {
     updatePlayImage(currentImg);
     // Update playingImg src
     playingImg.src = `images/s${currSongIndex}.jpg`;
+    updateSongName(currSongIndex);
 });
 
 myProgressBar.addEventListener('change', () => {
