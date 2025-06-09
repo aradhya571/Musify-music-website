@@ -1,5 +1,5 @@
 .d-flex.flex-column.flex-shrink-0.bg-body-tertiary{
-    background-color: #212529 !important
+    background-color: #212529 !important;
 }
 
 .text-end {
@@ -22,7 +22,7 @@ body {
 }
 
 .row-cols-5>* {
-    flex: 0 0 auto;
+    flex: 0 0 auto; 
     width: 20%;
     padding-left: 0px !important;
 
