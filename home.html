@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Musify</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" />
+</head>
+<body>
+
+    <!-- sidebar -->
+    <div class="d-flex flex-column flex-shrink-0 bg-body-tertiary sidebar" style="width: 4.5rem;">
+        <a href="/" class="d-block p-3 link-body-emphasis text-decoration-none" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-original-title="Icon-only">
+          <svg class="bi pe-none" width="40" height="32"><use xlink:href="#bootstrap"></use></svg>
+          <span class="visually-hidden">Icon-only</span>
+        </a>
+        <ul class="nav nav-pills nav-flush flex-column mb-auto text-center" style="padding-top: 10px;">
+          <li class="nav-item">
+            <a href="#" class="nav-link py-3  rounded-0" aria-current="page" data-bs-toggle="tooltip" data-bs-placement="right" aria-label="Home" data-bs-original-title="Home">
+                <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="white" class="bi bi-house-door hov" viewBox="0 0 16 16">
+                    <path d="M8.354 1.146a.5.5 0 0 0-.708 0l-6 6A.5.5 0 0 0 1.5 7.5v7a.5.5 0 0 0 .5.5h4.5a.5.5 0 0 0 .5-.5v-4h2v4a.5.5 0 0 0 .5.5H14a.5.5 0 0 0 .5-.5v-7a.5.5 0 0 0-.146-.354L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293zM2.5 14V7.707l5.5-5.5 5.5 5.5V14H10v-4a.5.5 0 0 0-.5-.5h-3a.5.5 0 0 0-.5.5v4z"/>
+                  </svg>
+            </a>
+          </li>
+          <li>
+            <a href="#" class="nav-link py-3  rounded-0" data-bs-toggle="tooltip" data-bs-placement="right" aria-label="Dashboard" data-bs-original-title="Dashboard">
+                <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" id="sidebarFavBtn" fill="white" class="bi bi-heart-fill hov" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd" d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314"/>
+                  </svg>
+            </a>
+          </li>
+          <li>
+            <a href="#" class="nav-link py-3  rounded-0" data-bs-toggle="tooltip" data-bs-placement="right" aria-label="Orders" data-bs-original-title="Orders">
+                <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="white" class="bi bi-music-note-list hov" viewBox="0 0 16 16">
+                    <path d="M12 13c0 1.105-1.12 2-2.5 2S7 14.105 7 13s1.12-2 2.5-2 2.5.895 2.5 2"/>
+                    <path fill-rule="evenodd" d="M12 3v10h-1V3z"/>
+                    <path d="M11 2.82a1 1 0 0 1 .804-.98l3-.6A1 1 0 0 1 16 2.22V4l-5 1z"/>
+                    <path fill-rule="evenodd" d="M0 11.5a.5.5 0 0 1 .5-.5H4a.5.5 0 0 1 0 1H.5a.5.5 0 0 1-.5-.5m0-4A.5.5 0 0 1 .5 7H8a.5.5 0 0 1 0 1H.5a.5.5 0 0 1-.5-.5m0-4A.5.5 0 0 1 .5 3H8a.5.5 0 0 1 0 1H.5a.5.5 0 0 1-.5-.5"/>
+                  </svg>
+            </a>
+          </li>
+          <li>
+            <a href="#" class="nav-link py-3 rounded-0" data-bs-toggle="tooltip" data-bs-placement="right" aria-label="Products" data-bs-original-title="Products">
+                <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="white" class="bi bi-collection-fill hov" viewBox="0 0 16 16">
+                    <path d="M0 13a1.5 1.5 0 0 0 1.5 1.5h13A1.5 1.5 0 0 0 16 13V6a1.5 1.5 0 0 0-1.5-1.5h-13A1.5 1.5 0 0 0 0 6zM2 3a.5.5 0 0 0 .5.5h11a.5.5 0 0 0 0-1h-11A.5.5 0 0 0 2 3m2-2a.5.5 0 0 0 .5.5h7a.5.5 0 0 0 0-1h-7A.5.5 0 0 0 4 1"/>
+                  </svg>
+            </a>
+          </li>
+        </ul>
+      </div>
+
+    <!----- navbar ------>
+    <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+        <div class="container-fluid" >
+            <img style="margin-right:10px" src="./images/logo.png" alt="logo" width="40px" height="40px">
+            <a class="navbar-brand" href="#" >MUSIFY</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="c-search-bar" style="width: 100%;padding-bottom:0px">
+            <div class="search-container" style="padding-left:300px">
+                <input class="search-input form me-2" type="search" placeholder="Search" aria-label="Search">
+                <div class="search-icon"></div>
+                <div id="not-found-msg" style="color: white; background: #333; padding: 6px 16px; border-radius: 8px; display: none; position: absolute; z-index: 10; margin-top: 4px;">
+                    Song not found
+                </div>
+            </div>
+        </div>
+
+            <div class="sign-up">
+                <div class="text-end" id="user-profile-area">
+                    <!-- JS will fill this -->
+                </div>
+            </div>
+        </div>
+    </nav>
+
+      <!----- first carousel ------>
+
+    <div class="first1">
+        <div class="first2 col-md-6 p-lg-5 mx-auto" style="display: flex;align-items:center;justify-content:center">
+           
+            <!-- start -->
+            <div class="container text-center" >
+                <div class="row row-cols-5 first-row">
+                  <div class="home-col">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" id="carouselFavBtn" fill="white" class="bi bi-heart-fill"  viewBox="0 0 16 16">
+                        <path fill-rule="evenodd" d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314"/>
+                    </svg>
+                    <h6>Liked Songs</h6>
+                  </div>
+                  <div class="home-col">
+                    <img src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/57b2867c-dd69-482e-b2c7-7605314dbe41/d4mi3el-1f375834-5ecc-40a9-be62-0bfcfc2c9db1.png/v1/fill/w_900,h_900,q_80,strp/lana_del_rey___ep_by_hollisterco_d4mi3el-fullview.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9OTAwIiwicGF0aCI6IlwvZlwvNTdiMjg2N2MtZGQ2OS00ODJlLWIyYzctNzYwNTMxNGRiZTQxXC9kNG1pM2VsLTFmMzc1ODM0LTVlY2MtNDBhOS1iZTYyLTBiZmNmYzJjOWRiMS5wbmciLCJ3aWR0aCI6Ijw9OTAwIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmltYWdlLm9wZXJhdGlvbnMiXX0.0veNjQriKUgkYHaX_1EX76Wn9tTitTOIo53VXH9sAQk" width="60" height="60">
+                    <h6>Lana Del Rey</h6>
+                </div>
+                  <div class="home-col">
+                    <img src="https://th.bing.com/th/id/OIP._wPyFF3G7cXidxVH0dCasQAAAA?rs=1&pid=ImgDetMain" height="60" width="60">
+                    <h6>New in Dance</h6>
+                </div>
+                  <div class="home-col">
+                    <img src="https://images.genius.com/bf6a0271b6c81c5052b12a8447fd0f47.956x956x1.jpg" height="60" width="60">
+                    <h6>Sabrina Carpenter</h6>
+                  </div>
+                  <div class="home-col">
+                    <img src="https://assets.rebelmouse.io/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpbWFnZSI6Imh0dHBzOi8vYXNzZXRzLnJibC5tcy8xNzU0NTg4Ny9vcmlnaW4uanBnIiwiZXhwaXJlc19hdCI6MTYzMjQ5MjM1MH0.UhafdD5DebEDpmFaRC9bp5wkW9fo7o6GVWP2bl5nV2E/img.jpg?width=980" height="60" width="60">
+                    <h6>Indie Mix</h6>
+                  </div>
+                  <div class="home-col">
+                    <img src="https://nextmag.ca/wp-content/uploads/2021/02/040053_1347451-copy-760x675.png" height="60" width="60">
+                    <h6>Mega Hit Mix</h6>
+                  </div>
+                </div>
+              </div>
+             <!-- end -->
+            
+        </div>
+    </div>
+
+
+    <!----- songs list container ------>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-sm">
+                <div class="card" style="width: 18rem;" data-id="1">
+                    <img src="./images/cover/s1.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">I Knew You Were Trouble</h5>
+                        <img class="play-img" src="./images/play.png" alt="play" id="1">
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm">
+                <div class="card" style="width: 18rem;" data-id="2">
+                    <img src="./images/cover/s2.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Nonsense</h5>
+                        <!-- <svg class="play-img" id="2" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-play-circle" viewBox="0 0 16 16"> <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14m0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16"/> <path d="M6.271 5.055a.5.5 0 0 1 .52.038l3.5 2.5a.5.5 0 0 1 0 .814l-3.5 2.5A.5.5 0 0 1 6 10.5v-5a.5.5 0 0 1 .271-.445"/> </svg>--->
+                        <img class="play-img" src="./images/play.png" alt="play" id="2"> 
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm">
+                <div class="card" style="width: 18rem;" data-id="3">
+                    <img src="./images/cover/s3.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Obsessed</h5>
+                        <img class="play-img" src="./images/play.png" alt="play" id="3">
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm">
+                <div class="card" style="width: 18rem;" data-id="4">
+                    <img src="./images/cover/s4.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Pehle Bhi Main</h5>
+                        <img class="play-img" src="./images/play.png" alt="play" id="4">
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm">
+                <div class="card" style="width: 18rem;" data-id="5">
+                    <img src="./images/cover/s5.jpeg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">7 Rings</h5>
+                        <img class="play-img" src="./images/play.png" alt="play" id="5">
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm">
+                <div class="card" style="width: 18rem;" data-id="6">
+                    <img src="./images/cover/s6.png" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">New Rules</h5>
+                        <img class="play-img" src="./images/play.png"  alt="play" id="6">
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm">
+                <div class="card" style="width: 18rem;" data-id="7">
+                    <img src="./images/cover/s7.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Agiri Nandini</h5>
+                        <img class="play-img" src="./images/play.png" alt="play" id="7">
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm">
+                <div class="card" style="width: 18rem;" data-id="8">
+                    <img src="./images/cover/s8.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">True Stories</h5>
+                        <img class="play-img" src="./images/play.png" alt="play" id="8">
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm">
+                <div class="card" style="width: 18rem;" data-id="9">
+                    <img src="./images/cover/s9.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Till Forever Falls Apart</h5>
+                        <img class="play-img" src="./images/play.png" alt="play" id="9">
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm">
+                <div class="card" style="width: 18rem;" data-id="10">
+                    <img src="./images/cover/s10.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Be Alright</h5>
+                        <img class="play-img" src="./images/play.png" alt="play" id="10">
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm">
+                <div class="card" style="width: 18rem;">
+                    <img src="./images/cover/s1.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">I Knew You Were Trouble</h5>
+                        <img class="play-img" src="./images/play.png" alt="play" id="11">
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm">
+                <div class="card" style="width: 18rem;">
+                    <img src="./images/cover/s6.png" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">New Rules</h5>
+                        <img class="play-img" src="./images/play.png" alt="play" id="12">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!----- bottom play bar ------>
+    <div class="bottom-play-bar-outer">
+        <div class="playing-img" style="display: flex; flex-direction:row">
+            <img src="./images/cover/s6.png" class="card-img-top" alt="..." id="playingImg">
+        </div>
+        <div style="display: flex;flex-direction:column">
+            <h5 style="color: white;padding-top:40px" id="songName">New Rules</h5>
+            <h6 style="color: dimgray; display:none">Dua Lipa</h6>
+        </div>
+        <div class="bottom-play-bar">
+            <div class="play-bar-icons">
+                <img class="bar-img " src="./images/play-bar-icons/shufle.png" alt="shuffle" width="60px" id="shuffleBtn">                
+                <img class="bar-img" src="./images/play-bar-icons/previous.png" alt="previous" width="60px" id="prevSong">
+                <img class="bar-img play" src="./images/play-bar-icons/play-button.png" alt="play" width="80px" id="masterPlay">
+                <img class="bar-img" src="./images/play-bar-icons/next.png" alt="next" width="60px" id="nextSong">
+                <img class="bar-img" src="./images/play-bar-icons/repeat-button.png" alt="repeat" width="60px" id="repeatBtn">
+                <span id="repeatCount" style="color:white; font-size:1.2em; vertical-align: super; margin-left:-18px; margin-right:10px; display:none;">1</span>
+            </div>
+            <svg id="masterFavBtn" xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 16 16" fill="none"
+                style="cursor:pointer; position:absolute; right:40px; top:50%; transform:translateY(-50%);">
+                <path id="masterFavPath" fill="#fff" fill-rule="evenodd" 
+                    d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314"/>
+            </svg>
+            <input id="myplaybar" type="range" name="range" min="0" value="0" max="100" class="slider">
+        </div>
+    </div>
+
+
+
+<script src="home.js"></script>
+<script src="fav.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/sortablejs@1.15.0/Sortable.min.js"></script>
+</body>
+</html>
